@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - PrepTracker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="main-header">
+    <div class="logo-section">
+        <img src="images/clg-logo.png" class="clg-logo">
+        <h2>PrepTracker</h2>
+    </div>
+
+    <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="materials.html">Materials</a>
+        <button onclick="logout()">Logout</button>
+    </nav>
+</header>
+
+<!-- DASHBOARD -->
+<div class="dashboard-container">
+
+    <!-- TOP -->
+    <div class="top-bar">
+        <h2 id="welcomeText">Welcome</h2>
+
+        <a href="add-question.html">
+            <button>Add Question</button>
+        </a>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+        <div class="card">
+            <h3>Total Questions</h3>
+            <p id="totalCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Completed</h3>
+            <p id="completedCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Pending</h3>
+            <p id="pendingCount">0</p>
+        </div>
+    </div>
+
+    <!-- PROGRESS -->
+    <div class="progress-section">
+        <h3>Progress</h3>
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div>
+        <p id="progressText">0%</p>
+    </div>
+
+    <!-- FILTER -->
+    <div class="questions-section">
+        <h3>Your Questions</h3>
+
+        <div class="filter-section">
+            <select id="filterCompany">
+                <option value="">All Companies</option>
+            </select>
+
+            <select id="filterSubject">
+                <option value="">All Subjects</option>
+            </select>
+
+            <select id="filterStatus">
+                <option value="">All Status</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+        </div>
+
+        <!-- QUESTIONS LIST -->
+        <div id="questionList"></div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 PrepTracker | All rights reserved. </p>
+</footer>
+
+<!-- JS -->
+<script src="js/utils.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

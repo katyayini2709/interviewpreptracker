@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Materials - PrepTracker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="main-header">
+    <div class="logo-section">
+        <img src="images/clg-logo.png" class="clg-logo">
+        <h2>PrepTracker</h2>
+    </div>
+
+    <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="materials.html">Materials</a>
+        <button onclick="logout()">Logout</button>
+    </nav>
+</header>
+
+<!-- MATERIALS PAGE -->
+<div class="materials-container">
+
+    <h2>Study Materials</h2>
+
+    <div class="add-material">
+        <input type="text" id="materialTitle" placeholder="Material Title">
+        <input type="text" id="materialLink" placeholder="Material Link">
+        <button onclick="addMaterial()">Add Material</button>
+    </div>
+
+    <ul class="materials-list" id="materialsList"></ul>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 PrepTracker | All rights reserved. </p>
+</footer>
+
+<!-- JS (order important) -->
+<script src="js/utils.js"></script>
+<script src="js/materials.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Question - PrepTracker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="main-header">
+    <div class="logo-section">
+        <img src="images/clg-logo.png" class="clg-logo">
+        <h2>PrepTracker</h2>
+    </div>
+
+    <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="materials.html">Materials</a>
+        <button onclick="logout()">Logout</button>
+    </nav>
+</header>
+
+<!-- PAGE -->
+<div class="dashboard-container">
+
+    <div class="top-bar">
+        <h2>Add Interview Question</h2>
+    </div>
+
+    <div id="successMessage" class="success-message" style="display:none;">
+        ✅ Question saved successfully!
+    </div>
+
+    <form id="questionForm" class="question-form">
+
+        <div class="form-group">
+            <label>Company</label>
+            <input type="text" id="company" placeholder="Amazon, Google..." required>
+        </div>
+
+        <div class="form-group">
+            <label>Subject</label>
+            <select id="subject" required>
+                <option value="">Select Subject</option>
+                <option value="DSA">DSA</option>
+                <option value="HR">HR</option>
+                <option value="Web Development">Web Development</option>
+                <option value="System Design">System Design</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Question</label>
+            <input type="text" id="questionText" required>
+        </div>
+
+        <div class="form-group">
+            <label>Difficulty</label>
+            <select id="difficulty" required>
+                <option value="">Select Difficulty</option>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+        </div>
+
+        <button type="submit">Save Question</button>
+    </form>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 PrepTracker | All rights reserved. </p>
+</footer>
+
+<!-- JS -->
+<script src="js/utils.js"></script>
+<script src="js/addQuestion.js"></script>
+
+</body>
+</html>
